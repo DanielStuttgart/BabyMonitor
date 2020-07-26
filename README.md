@@ -127,6 +127,7 @@ With my configuration with
 * Raspberry Pi Camea Module
 * external USB Microphone Samson
 * USB WiFi Module
+
 I got following result (ordered by latency from low to high)
 1. RTSP
 2. RTMP
