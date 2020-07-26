@@ -27,7 +27,9 @@ scp username@b:/path/to/file /path/to/destination
 ```
 ### Copy files by mounting Raspberry locally
 Install `sudo apt-get install sshfs`
+
 Connect `sshfs pi@<ip-address>:/folder/on/pi /folder/on/local`
+
 Unmount `fusermount -u ~/raspberry`
 
 ### Setup Audio
