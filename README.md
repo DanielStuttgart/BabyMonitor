@@ -63,6 +63,7 @@ Start server
 sudo /etc/init.d/nginx start
 sudo service nginx restart
 ```
+HTML-Folder `/var/www/html`
 
 ### Player for HLS 
 ```bash
