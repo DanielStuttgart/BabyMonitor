@@ -88,13 +88,14 @@ sudo npm install coffee-script -g
 git clone https://github.com/iizukanao/node-rtsp-rtmp-server.git
 cd node-rtsp-rtmp-server
 npm install -d
-sudo /etc/init.d/nginx stop
 cd ~/node-rtsp-rtmp-server
 ./start_server.sh &
 ```
 Start PiCam `./picam --alsadev hw:2,0 --rtspout -w 800 -h 480 -v 500000 -f 20 &`
 
 Show strem `rtsp://192.168.1.3:80/live/picam`
+
+The RTSP-/RTMP-Server supports HTML-server and RTMP-server as well. If you are using NGINX, it will not be possible to post both streams onto HTTP-Port 80. You can deactivate NGiNX by ```sudo /etc/init.d/nginx stop``` You can as well change the *config.coffee*-file and set HTTP- / RTMP-Server to false.
 
 ### RTMP-Streaming with nginx
 ```bash
