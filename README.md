@@ -95,7 +95,7 @@ Start PiCam `./picam --alsadev hw:2,0 --rtspout -w 800 -h 480 -v 500000 -f 20 &`
 
 Show strem `rtsp://192.168.1.3:80/live/picam`
 
-The RTSP-/RTMP-Server supports HTML-server and RTMP-server as well. If you are using NGINX, it will not be possible to post both streams onto HTTP-Port 80. You can deactivate NGiNX by ```sudo /etc/init.d/nginx stop```. You can as well change the *config.coffee*-file and set HTTP- / RTMP-Server to false. The custom receiver needs to be set to true. I changed the server port to ```8080`` s.t. NGINX can be run in parallel.
+The RTSP-/RTMP-Server supports HTML-server and RTMP-server as well. If you are using NGINX, it will not be possible to post both streams onto HTTP-Port 80. You can deactivate NGiNX by ```sudo /etc/init.d/nginx stop```. You can as well change the *config.coffee*-file and set HTTP- / RTMP-Server to false. The custom receiver needs to be set to true. I changed the server port to ```8080``` s.t. NGINX server can be run in parallel.
 
 ### RTMP-Streaming with nginx
 ```bash
@@ -138,3 +138,4 @@ I got following result (ordered by latency from low to high)
 ## GUI by Server 
 [GitHUB-Homepage D3](https://github.com/d3/d3)
 [Project Homepage D3](https://d3js.org/)
+
