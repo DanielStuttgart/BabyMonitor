@@ -164,4 +164,14 @@ else:
     print('Failed to get reading. Try again!')
     sys.exit(1)
 ```
-In order to work with a local CSV file as a ring puffer, PANDAS is used. To install, use ```sudo apt-get install python-pandas```. 
+In order to work with a local CSV file as a ring puffer, PANDAS is used. To install, use ```sudo apt-get install python-pandas```.
+
+CSV ring puffer: 
+```python
+csv = pd.read_csv('/var/www/html/temp.csv')
+if len(csv_new > 2000)
+    csv = csv.drop(csv.index[0])
+new_row = {'date': '02.08.2020-10:30:50', 'temperature': 20.0, 'humidity': 80.}
+csv_new.append(new_row, ignore_index=True)
+csv_new.to_csv('output.csv',index=False)
+```
