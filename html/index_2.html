@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<html>
+<body>
+
+<h2>JavaScript in Body</h2>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+</script>
+<!-- Add a svg shape. Note that the 'target' class is attributed to the circle -->
+<svg> 
+  <circle class="target" style="fill: #69b3a2" stroke="black" cx=50 cy=50 r=40></circle>
+</svg>
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<script>
+d3
+  .select(".target")  // select the elements that have the class 'target'
+  .style("stroke-width", 8) // change their style: stroke width is not equal to 8 pixels
+
+console.log("Test2");
+var parseData = d3.timeParse("%m/%d/%Y");
+//d3.csv("prices.csv")
+//  .row(function(d) {return { date:parseDate(d.date),price:Number(d.price.trim().slice(1))};})
+//  .get(function(error,data){ 
+//    console.log(data);
+//  });
+d3.csv("prices.csv", function(data) {
+  console.log(data);
+});
+</script>
+
+</body>
+</html> 
+
