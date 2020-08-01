@@ -163,5 +163,5 @@ if humidity is not None and temperature is not None:
 else:
     print('Failed to get reading. Try again!')
     sys.exit(1)
-
 ```
+In order to work with a local CSV file as a ring puffer, PANDAS is used. To install, use ```sudo apt-get install python-pandas```. 
