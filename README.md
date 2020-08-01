@@ -175,3 +175,9 @@ new_row = {'date': '02.08.2020-10:30:50', 'temperature': 20.0, 'humidity': 80.}
 csv_new.append(new_row, ignore_index=True)
 csv_new.to_csv('output.csv',index=False)
 ```
+
+## Server
+Files for server configuration
+* config.coffee: configuration file for node-rtsp-rtmp-server
+* default: configuration nginx (```/etc/nginx/sites-available/default```)
+* nginx.conf: configuration nginx (```/etc/nginx/nginx.conf```)
