@@ -79,13 +79,13 @@ d3.csv("temp.csv", function(error, data) {
 	});
 
 	// slice data --> only last 20 values are relevant
-	sliced_data = data.slice(data.length - 100, data.length)
+	sliced_data = data.slice(data.length - 20, data.length)
 	console.log(sliced_data)
  
 	// Scale the range of the data
 	x.domain(d3.extent(sliced_data, function(d) { return d.date; }));
-	y.domain([d3.min(sliced_data, function(d) {return Math.min(d.temperature) - 5; }), d3.max(sliced_data, function(d) { return Math.max(d.temperature) + 5; })]);
-	y2.domain([d3.min(sliced_data, function(d) {return Math.min(d.humidity-10); }), d3.max(sliced_data, function(d) { return Math.max(d.humidity) + 10; })]);
+	y.domain([0, d3.max(sliced_data, function(d) { return Math.max(d.temperature); })]);
+	y2.domain([0, d3.max(sliced_data, function(d) { return Math.max(d.humidity); })]);
  
 	// Add the valueline path.
 	svg.append("path")	
