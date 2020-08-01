@@ -139,3 +139,6 @@ I got following result (ordered by latency from low to high)
 [GitHUB-Homepage D3](https://github.com/d3/d3)
 [Project Homepage D3](https://d3js.org/)
 
+## Temperature
+![alt text](https://raw.githubusercontent.com/DanielStuttgart/BabyMonitor/master/temperature/luftfeuchtigkeit_DHT11_Steckplatine.png "Bread Board Layout DHT22 from [Tutorial](https://tutorials-raspberrypi.de/raspberry-pi-luftfeuchtigkeit-temperatur-messen-dht11-dht22/)")
+
