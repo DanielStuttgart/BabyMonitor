@@ -40,6 +40,13 @@ Install LibAudio `sudo apt-get install libportaudio0 libportaudio2 libportaudioc
 Install pyAduio `sudo pip3 install pyaudio`
 
 Look for record device `arecord -l`
+```
+**** Liste der Hardware-Geräte (CAPTURE) ****
+Karte 1: GoMic [Samson GoMic], Gerät 0: USB Audio [USB Audio]
+  Sub-Geräte: 1/1
+  Sub-Gerät #0: subdevice #0
+```
+This means, --alsadev hw:1,0` is used.
 
 ## Setup PiCam Module
 GIT-clone `git clone https://github.com/iizukanao/picam.git`
