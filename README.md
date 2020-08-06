@@ -166,7 +166,13 @@ sudo make install
 
 sudo ldconfig
 
+cd /opt/vc/src/hello_pi/libs/ilclient
+make
 
+git clone https://github.com/iizukanao/picam.git
+cd picam
+make -j4
+  (I encountered a problem with latomic (__atomic_store_8 undefined), so I added -latomic to LDFLAGS in Makefile)
 ```
 
 ## GUI by Server 
