@@ -144,6 +144,31 @@ I got following result (ordered by latency from low to high)
 2. RTMP
 3. HLS
 
+### Build from sources
+```
+sudo apt-get install git libasound2-dev libssl-dev libfontconfig1-dev libharfbuzz-dev
+wget -O fdk-aac-2.0.1.tar.gz https://sourceforge.net/projects/opencore-amr/files/fdk-aac/fdk-aac-2.0.1.tar.gz
+
+tar zxvf fdk-aac-0.1.6.tar.gz
+cd fdk-aac-0.1.6
+./configure
+make -j4
+ (takes 3-4 minutes)
+sudo make install
+
+git clone https://git.ffmpeg.org/ffmpeg.git
+cd ffmpeg
+./configure --enable-libfdk-aac 
+  (old, some problems with definitions)
+./configure --extra-ldflags="-latomic" --arch=armel --target-os=linux --enable-gpl --enable-omx --enable-omx-rpi --enable-nonfree --enable-libfdk-aac
+(takes about one minute)
+sudo make install
+
+sudo ldconfig
+
+
+```
+
 ## GUI by Server 
 [GitHUB-Homepage D3](https://github.com/d3/d3)
 [Project Homepage D3](https://d3js.org/)
