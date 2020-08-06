@@ -39,6 +39,8 @@ Install LibAudio `sudo apt-get install libportaudio0 libportaudio2 libportaudioc
 
 Install pyAduio `sudo pip3 install pyaudio`
 
+Look for record device `arecord -l`
+
 ## Setup PiCam Module
 GIT-clone `git clone https://github.com/iizukanao/picam.git`
 
