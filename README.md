@@ -162,6 +162,7 @@ cd ffmpeg
   (old, some problems with definitions)
 ./configure --extra-ldflags="-latomic" --arch=armel --target-os=linux --enable-gpl --enable-omx --enable-omx-rpi --enable-nonfree --enable-libfdk-aac
 (takes about one minute)
+make -j4
 sudo make install
 
 sudo ldconfig
