@@ -233,12 +233,12 @@ country=DE
 
 network={
  ssid="DanielsMate20Pro"
- psk="91112345"
+ psk="xxx"
  id_str="mobile"
 }
 network={
  ssid="o2-WLAN87_2"
- psk="1144501852006985"
+ psk="xxx"
  id_str="home"
 }
 ```
