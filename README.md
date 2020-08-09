@@ -222,3 +222,22 @@ Files for server configuration
 * config.coffee: configuration file for node-rtsp-rtmp-server
 * default: configuration nginx (```/etc/nginx/sites-available/default```)
 * nginx.conf: configuration nginx (```/etc/nginx/nginx.conf```)
+
+## Misc
+Add Wifi-networks to Raspberry Pi without monitor: change ```/boot/wpa_supplicant.conf```
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=DE
+
+network={
+ ssid="DanielsMate20Pro"
+ psk="91112345"
+ id_str="mobile"
+}
+network={
+ ssid="o2-WLAN87_2"
+ psk="1144501852006985"
+ id_str="home"
+}
+```
