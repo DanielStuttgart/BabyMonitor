@@ -224,6 +224,7 @@ Files for server configuration
 * nginx.conf: configuration nginx (```/etc/nginx/nginx.conf```)
 
 ## Misc
+### Networking
 Add Wifi-networks to Raspberry Pi without monitor: change ```/boot/wpa_supplicant.conf```
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -240,4 +241,17 @@ network={
  psk="1144501852006985"
  id_str="home"
 }
+```
+### Debugging
+In order to start GDB, type ```gdb <program_executable>```
+```
+r [arg1] [arg2] # run program with 2x arguments; r == run
+step / s # steps into function / executes line
+next / n # step over function
+continue / c # continue executing
+break [filename]:[linenumer] # 
+list # list source code around break point
+run / r # run program
+print [variable] # print variable content
+set [variable] = [value] # set var to value
 ```
