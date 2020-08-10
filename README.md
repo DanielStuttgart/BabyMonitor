@@ -49,6 +49,7 @@ Karte 1: GoMic [Samson GoMic], Gerät 0: USB Audio [USB Audio]
 This means, --alsadev hw:1,0` is used.
 
 ## Setup PiCam Module
+[Link to PiCam-Github](https://github.com/iizukanao/picam.git)
 GIT-clone `git clone https://github.com/iizukanao/picam.git`
 
 Run with Audio-Device and resolution 640 x 480 `./picam --alsadev hw:2,0 -w 640 -h 480`
