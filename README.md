@@ -256,3 +256,51 @@ run / r # run program
 print [variable] # print variable content
 set [variable] = [value] # set var to value
 ```
+
+### Install geany with Debugging-Plugin for Raspberry Pi OS Buster
+Information taken from [Forum](https://forum-raspberrypi.de/forum/thread/46925-geany-plugin-debugger-fuer-raspbian-buster-nachruesten/)
+```
+Base OS Image:Raspbian  2020-02-13-raspbian-buster.img
+
+Source code:
+The source code downloaded from https://github.com/geany will fail.
+Also you cannot install from apt-get repositry.
+Please follow to the following instruction.
+
+Important:
+In the geany plugin configuration, the extract destination is "/usr/local" by default, so set this to "/usr".
+
+1. Purge geany
+$ sudo apt-get purge -y geany*
+
+2. Additional library instalation 
+$ sudo apt-get install -y libgtk-3-dev
+$ sudo apt-get install -y intltool
+$ sudo apt-get install -y libvte-2.91-dev
+
+3. *** Geany install ***
+
+### make dir on /home/pi/Downloads ###
+pi@raspberrypi:~ $ cd Downloads
+pi@raspberrypi:~/Downloads $ mkdir geany-1.36
+pi@raspberrypi:~/Downloads $ mkdir geany-plugins
+
+pi@raspberrypi:~/Downloads $ cd geany-1.36
+pi@raspberrypi:~/Downloads/geany-1.36 $ wget https://download.geany.org/geany-1.36.tar.gz
+pi@raspberrypi:~/Downloads/geany-1.36 $ tar -zxvf geany-1.36.tar.gz
+pi@raspberrypi:~/Downloads/geany-1.36 $ cd geany-1.36
+pi@raspberrypi:~/Downloads/geany-1.36/geany-1.36 $ ./configure
+pi@raspberrypi:~/Downloads/geany-1.36/geany-1.36 $ make
+pi@raspberrypi:~/Downloads/geany-1.36/geany-1.36 $ sudo make install
+
+4. *** Geany Plugin install ***
+pi@raspberrypi:~/Downloads $  cd /home/pi/Downloads/geany-plugins
+pi@raspberrypi:~/Downloads/geany-plugins $ wget https://plugins.geany.org/geany-plugins/geany-plugins-1.36.tar.gz
+pi@raspberrypi:~/Downloads/geany-1.36 $ tar -zxvf geany-plugins-1.36.tar.gz
+pi@raspberrypi:~/Downloads/geany-1.36 $ cd geany-plugins-1.36
+pi@raspberrypi:~/Downloads/geany-plugins/geany-plugins-1.36 $ ./configure --prefix=/usr
+pi@raspberrypi:~/Downloads/geany-1.36/geany-1.36 $ make
+pi@raspberrypi:~/Downloads/geany-1.36/geany-1.36 $ sudo make install
+
+$sudo reboot
+```
