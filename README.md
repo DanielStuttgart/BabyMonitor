@@ -223,6 +223,12 @@ Files for server configuration
 * config.coffee: configuration file for node-rtsp-rtmp-server
 * default: configuration nginx (```/etc/nginx/sites-available/default```)
 * nginx.conf: configuration nginx (```/etc/nginx/nginx.conf```)
+Needed to add write access to www-user by ```chmod -R 777```
+Added PHP-support by 
+* ```sudo apt install php-fpm```
+* add index.php to ```sites-enabled/default```
+* uncoment PHP-section within ```sites-enabled/default```
+* restart nginx ```sudo /etc/init.d/nginx reload``
 
 ## Misc
 ### Networking
