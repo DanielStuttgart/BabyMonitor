@@ -102,6 +102,7 @@ cd ~/node-rtsp-rtmp-server
 ./start_server.sh &
 ```
 Start PiCam `./picam --alsadev hw:2,0 --rtspout -w 800 -h 480 -v 500000 -f 20 &`
+Start PiCam `./picam --alsadev hw:1,0 --rtspout -w 800 -h 480 -v 500000 -f 20 --hooksdir /var/www/html/hooks`
 
 Show strem `rtsp://192.168.1.3:80/live/picam`
 
