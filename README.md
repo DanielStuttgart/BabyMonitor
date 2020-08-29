@@ -81,6 +81,7 @@ cd /var/www/html
 sudo git clone https://github.com/kamranayub/picam-viewer.git .
 ./picam -o /run/shm/hls --alsadev hw:1,0
 ```
+For more details see https://docs.videojs.com/
 
 ### HLS-Streaming
 Change nginx to stream rtmp (*/etc/nginx/sites-available/default*) 
