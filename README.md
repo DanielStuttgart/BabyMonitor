@@ -79,6 +79,7 @@ HTML-Folder `/var/www/html`
 ```bash
 cd /var/www/html
 sudo git clone https://github.com/kamranayub/picam-viewer.git .
+./picam -o /run/shm/hls --alsadev hw:1,0
 ```
 
 ### HLS-Streaming
