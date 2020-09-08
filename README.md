@@ -136,6 +136,9 @@ Start PiCam `./picam --alsadev hw:2,0 --tcpout tcp://127.0.0.1:8181 -w 800 -h 48
 
 Show stream `rtmp://192.168.1.3/webcam/mystream`
 
+Add process to startup: 
+/etc/rc.local
+
 ### Evaluation
 With my configuration with
 * Raspberry Pi 2 B
