@@ -255,7 +255,8 @@ network={
  id_str="home"
 }
 ```
-This file is copied to /etc/wpa_supplicant.conf afterwards.
+This file is copied to /etc/wpa_supplicant.conf afterwards. For converting to HEX, use echo "Réseau de XL1" | xxd -p | tr a-z A-Z 
+For finding IP address, use nmap -sp 192.100.1.1/24
 
 ### Debugging
 In order to start GDB, type ```gdb <program_executable>```
