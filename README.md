@@ -255,6 +255,8 @@ network={
  id_str="home"
 }
 ```
+This file is copied to /etc/wpa_supplicant.conf afterwards.
+
 ### Debugging
 In order to start GDB, type ```gdb <program_executable>```
 ```
