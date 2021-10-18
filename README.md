@@ -319,3 +319,6 @@ pi@raspberrypi:~/Downloads/geany-1.36/geany-1.36 $ sudo make install
 
 $sudo reboot
 ```
+
+Kill Python Processes: sudo pkill pyhon
+rc-local: sudo nano /etc/rc.local
